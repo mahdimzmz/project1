@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+.container {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px black;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.screen {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* START SCREEN */
+
+#start-screen h1 {
+    color: rgb(190, 101, 101);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+#start-screen p {
+    color: rgb(59, 65, 77);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+
+.quiz-header {
+    margin-bottom: 2rem;
+}
+
+#question-text {
+    color: rgb(43, 40, 40);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    color: rgb(13, 78, 78);
+    margin-bottom: 10px;
+}
+
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.answer-btn {
+    background-color: rgb(213, 219, 224);
+    color: rgb(43, 40, 40);
+    border: 2px solid rgb(224, 218, 218);
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.answer-btn:hover {
+    background-color: rgb(168, 211, 211);
+    border-color: cadetblue;
+}
+
+.answer-btn.correct {
+    background-color: aquamarine;
+    border-color: aqua;
+    color: chartreuse;
+}
+
+.answer-btn.incorrect {
+    background-color: rgb(209, 25, 25);
+    border-color: rgb(146, 76, 76);
+    color: rgb(209, 52, 162);
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress {
+    height: 100%;
+    background-color: rgb(189, 91, 91);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* RESULT SCREEN */
+
+#result-screen h1 {
+    color: rgb(190, 78, 78);
+    margin-bottom: 30px;
+}
+
+.result-info {
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.result-info p {
+    font-size: 1.2rem;
+    color: rgb(35, 49, 49);
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: rgb(202, 131, 131);
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(122, 79, 79);
+}
+
+/* responsive design */
+
+@media (max-width:500px){
+    /* when we hit 500px and below, implement the styles below */
+
+    .screen{
+        padding: 1rem;
+    }
+
+    #start-screen h1 {
+        font-size: 2rem;
+    }
+}
